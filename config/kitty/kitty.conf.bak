@@ -1,0 +1,8 @@
+# BEGIN_KITTY_THEME
+# Bright Lights
+include current-theme.conf
+# END_KITTY_THEME
+background_opacity 0.80
+tab_bar_style powerline
+shell fish
+map ctrl+shift+t launch --cwd=current --type=tab
