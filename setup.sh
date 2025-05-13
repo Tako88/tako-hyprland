@@ -7,33 +7,33 @@ packages=(
     "git"
     "rsync"
     "wget"
-    "unzip",
-    "hyprland",
-    "waybar",
-    "rofi-wayland",
-    "dunst",
-    "swaync",
-    "dolphin",
-    "kwrite",
-    "xdg-desktop-portal-hyprland",
-    "qt5-qtwayland",
-    "qt6-qtwayland",
-    "hyprpaper",
-    "hyprlock",
-    "firefox",
-    "fontawesome-6-free-fonts",
-    "python3-pip",
-    "fastfetch",
-    "mozilla-fira-sans-fonts",
-    "fira-code-fonts",
-    "wlogout",
-    "python3-gobject",
-    "gtk4",
-    "sddm",
-    "hyprpolkitagent",
-    "gparted",
-    "flatpak",
-    "kitty",
+    "unzip"
+    "hyprland"
+    "waybar"
+    "rofi-wayland"
+    "dunst"
+    "swaync"
+    "dolphin"
+    "kwrite"
+    "xdg-desktop-portal-hyprland"
+    "qt5-qtwayland"
+    "qt6-qtwayland"
+    "hyprpaper"
+    "hyprlock"
+    "firefox"
+    "fontawesome-6-free-fonts"
+    "python3-pip"
+    "fastfetch"
+    "mozilla-fira-sans-fonts"
+    "fira-code-fonts"
+    "wlogout"
+    "python3-gobject"
+    "gtk4"
+    "sddm"
+    "hyprpolkitagent"
+    "gparted"
+    "flatpak"
+    "kitty"
     "fish"
 )
 
