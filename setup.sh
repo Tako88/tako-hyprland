@@ -63,21 +63,6 @@ fi
 
 sudo yay --noconfirm -S wlogout
 
-flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-flatpaks=(
-    "com.brave.Browser"
-    "com.stremio.Stremio"
-    "org.mozilla.Thunderbird"
-    "com.discordapp.Discord"
-    "com.obsproject.Studio"
-    "com.spotify.Client"
-    "org.telegram.desktop"
-    "org.videolan.VLC"
-)
-
-flatpak install "${flatpaks[@]}";
-
 # Copy config directories
 if [ ! -d $target_dir ] ;then
     echo "$target_dir doesn't exist, creating..."
