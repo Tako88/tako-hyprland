@@ -4,7 +4,7 @@ target_dir="$HOME/.config"
 
 #Install required packages
 packages=(
-    "git"
+    "base-devel"
     "rsync"
     "wget"
     "unzip"
@@ -16,29 +16,53 @@ packages=(
     "dolphin"
     "kwrite"
     "xdg-desktop-portal-hyprland"
-    "qt5-qtwayland"
-    "qt6-qtwayland"
+    "qt5-wayland"
+    "qt6-wayland"
     "hyprpaper"
     "hyprlock"
     "firefox"
-    "fontawesome-6-free-fonts"
+    "ttf-font-awesome"
     "python3-pip"
     "fastfetch"
-    "mozilla-fira-sans-fonts"
-    "fira-code-fonts"
-    "wlogout"
-    "python3-gobject"
+    "ttf-fira-sans"
+    "ttf-firacode-nerd"
+    "fuse2"
+    "python-gobject"
     "gtk4"
-    "sddm"
+    "libadwaita"
+    "jq"
     "hyprpolkitagent"
-    "gparted"
+    "xdotool"
+    "brightnessctl"
+    "networkmanager"
+    "wireplumber"
     "flatpak"
     "kitty"
     "fish"
 )
 
-sudo pacman -Syu
-sudo pacman -S ${packages[@]}
+sudo pacman -Sy
+echo
+sudo pacman --noconfirm -S "${packages[@]}";
+
+#Install yay if needed
+
+if sudo pacman -Qs yay > /dev/null ; then
+    echo "yay is already installed!"
+else
+    echo "yay is not installed. Will be installed now!"
+    _installPackagesPacman "base-devel"
+    SCRIPT=$(realpath "$0")
+    temp_path=$(dirname "$SCRIPT")
+    echo $temp_path
+    git clone https://aur.archlinux.org/yay-git.git ~/yay-git
+    cd ~/yay-git
+    makepkg -si
+    cd $temp_path
+    echo "yay has been installed successfully."
+fi
+
+sudo yay --noconfirm -S wlogout
 
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
@@ -53,7 +77,7 @@ flatpaks=(
     "org.videolan.VLC"
 )
 
-flatpak install ${flatpaks[@]}
+flatpak install "${flatpaks[@]}";
 
 # Copy config directories
 if [ ! -d $target_dir ] ;then
