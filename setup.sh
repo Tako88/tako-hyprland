@@ -22,7 +22,6 @@ packages=(
     "hyprlock"
     "firefox"
     "ttf-font-awesome"
-    "python3-pip"
     "fastfetch"
     "ttf-fira-sans"
     "ttf-firacode-nerd"
