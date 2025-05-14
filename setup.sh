@@ -37,7 +37,7 @@ packages=(
     "wireplumber"
     "flatpak"
     "kitty"
-    "fish",
+    "fish"
     "gnome-themes-extra"
 )
 
