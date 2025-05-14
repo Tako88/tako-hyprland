@@ -37,7 +37,8 @@ packages=(
     "wireplumber"
     "flatpak"
     "kitty"
-    "fish"
+    "fish",
+    "gnome-themes-extra"
 )
 
 sudo pacman -Sy
