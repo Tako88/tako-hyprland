@@ -140,7 +140,7 @@ window#waybar.empty #window {
 #clock,
 #wireplumber{
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: bold;
     color: @iconcolor;
     padding: 4px 10px 4px 10px;
@@ -208,7 +208,7 @@ window#waybar.empty #window {
 
 #clock {
     background-color: @backgrounddark;
-    font-size: 16px;
+    font-size: 17px;
     color: @textcolor1;
     border-radius: 10px;
     margin: 10px 7px 10px 7px;
